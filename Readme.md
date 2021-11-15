@@ -9,7 +9,7 @@
 | Worker node 2 | 192.168.5.152 | Ubuntu 20.04 LTS | 4GB    | 2   |
 | Worker node 3 | 192.168.5.152 | Ubuntu 20.04 LTS | 4GB    | 2   |
 
-⋅⋅* Password for the **root** account on all these VMS is **kubeadmin**
+* Password for the **root** account on all these VMS is **kubeadmin**
 
 ## Pre-requisites
    * Virtualbox installed
@@ -27,9 +27,12 @@ Create an ssh keypair on the host machine
 `ssh-keygen`
 
 ### Copy SSH Keys to all the kubernetes nodes 
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.101 'cat >> ~/.ssh/authorized_keys' `  
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.101 'cat >> ~/.ssh/authorized_keys' ` 
+
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.151 'cat >> ~/.ssh/authorized_keys' `  
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.152 'cat >> ~/.ssh/authorized_keys' `    
+
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.152 'cat >> ~/.ssh/authorized_keys' `
+    
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.153 'cat >> ~/.ssh/authorized_keys' `  
 
 ## Create the Kubernetes cluster configuration by using RKE 
