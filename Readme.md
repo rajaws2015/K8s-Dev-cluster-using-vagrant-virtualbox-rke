@@ -12,12 +12,12 @@
 ⋅⋅* Password for the **root** account on all these VMS is **kubeadmin**
 
 ## Pre-requisites
-⋅⋅* Virtualbox installed
-⋅⋅* Vagrant installed
-⋅⋅* Host machine has atleast 8 cores
-⋅⋅* Host machine has atleast 32G memory
-⋅⋅* RKE Binary Latest release [here](https://github.com/rancher/rke/releases/)
-⋅⋅* Kubectl Binary
+   * Virtualbox installed
+   * Vagrant installed
+   * Host machine has atleast 8 cores
+   * Host machine has atleast 32G memory
+   * RKE Binary Latest release [here](https://github.com/rancher/rke/releases/)
+   * Kubectl Binary
 
 ## Create all the above virtual machines
 `vagrant up`
@@ -27,10 +27,10 @@ Create an ssh keypair on the host machine
 `ssh-keygen`
 
 ### Copy SSH Keys to all the kubernetes nodes 
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.101 'cat >> ~/.ssh/authorized_keys' `
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.151 'cat >> ~/.ssh/authorized_keys' `
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.152 'cat >> ~/.ssh/authorized_keys' `
-`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.153 'cat >> ~/.ssh/authorized_keys' `
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.101 'cat >> ~/.ssh/authorized_keys' `  
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.151 'cat >> ~/.ssh/authorized_keys' `  
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.152 'cat >> ~/.ssh/authorized_keys' `    
+`cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.153 'cat >> ~/.ssh/authorized_keys' `  
 
 ## Create the Kubernetes cluster configuration by using RKE 
 `rke config --name devcluster.yml`
