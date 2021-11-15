@@ -49,7 +49,7 @@ Once the cluster provisioned then there will be a file **kube_config_devcluster.
 
 `Copy-Item .\kube_config_devcluster.yml -Destination "~/.kube"`
 
-`Rename-Item -Path "C:\Users\rajms\.kube\kube_config_devcluster.yml" -NewName "config"` 
+`Rename-Item -Path "~\.kube\kube_config_devcluster.yml" -NewName "config"` 
 
 
 ## Verifying the Cluster installation
