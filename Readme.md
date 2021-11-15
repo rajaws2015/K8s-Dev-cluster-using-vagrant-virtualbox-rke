@@ -42,9 +42,12 @@ This is a interactive cluster configuration, so it will produce a **devcluster.y
 ## Spin up the cluster 
 `rke up --config devcluster.yml`
 
-Once the cluster provisioned then there will be a file **kube_config_devcluster.yml** generated in the current directory. Please copy this file into **~/.kube** folder and rename the file as **config**.
-`mkdir ~/.kube`
-`Copy-Item .\kube_config_devcluster.yml -Destination "~/.kube"` 
+Once the cluster provisioned then there will be a file **kube_config_devcluster.yml** generated in the current directory. Please copy this file into **~/.kube** folder and rename the file as **config**.  
+
+`mkdir ~/.kube`  
+
+`Copy-Item .\kube_config_devcluster.yml -Destination "~/.kube"`
+ 
 `Rename-Item -Path "C:\Users\rajms\.kube\kube_config_devcluster.yml" -NewName "config"` 
 
 
