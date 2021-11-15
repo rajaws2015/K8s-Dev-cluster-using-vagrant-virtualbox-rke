@@ -1,5 +1,6 @@
 # Set up a Kubernetes Cluster using Rancher RKE
 This document guides you to setup a K8s cluster with 1 master and 3 worker nodes running on Ubuntu 20.04 LTS in vagrant environment using RKE (Rancher kubernetes Engine).
+NOTE: My hostmachine is Windows 10 Pro.
 
 ## Vagrant Environment
 | Role          | IP            | OS               | RAM   | CPU  |
