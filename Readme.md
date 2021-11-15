@@ -37,7 +37,8 @@ Create an ssh keypair on the host machine
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.153 'cat >> ~/.ssh/authorized_keys' `  
 
 ## Create the Kubernetes cluster configuration by using RKE 
-`rke config --name devcluster.yml`
+`rke config --name devcluster.yml`  
+
 This is a interactive cluster configuration, so it will produce a **devcluster.yml** in the current directory.
 
 ## Spin up the cluster 
