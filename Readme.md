@@ -32,7 +32,7 @@ Create an ssh keypair on the host machine
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.151 'cat >> ~/.ssh/authorized_keys' `  
 
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.152 'cat >> ~/.ssh/authorized_keys' `
-    
+
 `cat ~/.ssh/id_rsa.pub | ssh root@192.168.5.153 'cat >> ~/.ssh/authorized_keys' `  
 
 ## Create the Kubernetes cluster configuration by using RKE 
@@ -44,10 +44,11 @@ This is a interactive cluster configuration, so it will produce a **devcluster.y
 
 Once the cluster provisioned then there will be a file **kube_config_devcluster.yml** generated in the current directory. Please copy this file into **~/.kube** folder and rename the file as **config**.
 `mkdir ~/.kube`
-`Copy-Item .\kube_config_devcluster.yml -Destination "~/.kube"`
-`Rename-Item -Path "C:\Users\rajms\.kube\kube_config_devcluster.yml" -NewName "config"`
+`Copy-Item .\kube_config_devcluster.yml -Destination "~/.kube"` 
+`Rename-Item -Path "C:\Users\rajms\.kube\kube_config_devcluster.yml" -NewName "config"` 
+
 
 ## Verifying the Cluster installation
-`Kubectl get nodes`
-`kubectl get pods --all-namespaces`
+`Kubectl get nodes`  
+`kubectl get pods --all-namespaces`  
 
